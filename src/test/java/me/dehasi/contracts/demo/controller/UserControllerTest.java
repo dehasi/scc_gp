@@ -58,9 +58,9 @@ public class UserControllerTest {
     }
 
     @Test
-    public void getBets_knownUserNoBets_returnsEmptyList() throws Exception {
-        mockMvc.perform(get("/bets/{userId}", "42"))
-                .andExpect(status().isNotFound());
+    public void getBets_knownUserNoBets_201() throws Exception {
+        mockMvc.perform(get("/bets/{userId}", "1"))
+                .andExpect(status().isNoContent());
     }
 
     @Test
@@ -71,5 +71,10 @@ public class UserControllerTest {
                 .andExpect(content().string("[{\"sport\":\"horses\",\"amount\":10},{\"sport\":\"boxing\",\"amount\":2}]"));
     }
 
+    @Test
+    public void getBets_unknownUser_404() throws Exception {
+        mockMvc.perform(get("/bets/{userId}", "42"))
+                .andExpect(status().isNotFound());
+    }
 
 }

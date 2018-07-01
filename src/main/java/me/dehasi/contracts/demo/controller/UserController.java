@@ -4,6 +4,7 @@ import me.dehasi.contracts.demo.domain.Bet;
 import me.dehasi.contracts.demo.exception.UserNotFoundException;
 import me.dehasi.contracts.demo.service.BetService;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,8 +23,12 @@ public class UserController {
     }
 
     @GetMapping("/bets/{userId}")
-    public List<Bet> getBets(@PathVariable("userId") String userId) {
-        return service.getByUserId(userId);
+    public ResponseEntity<List<Bet>> getBets(@PathVariable("userId") String userId) {
+        List<Bet> bets = service.getByUserId(userId);
+        if (bets.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(bets);
     }
 
     @ExceptionHandler(UserNotFoundException.class)
