@@ -1,4 +1,4 @@
-package me.dehasi.contracts.scc.demo;
+package me.dehasi.contracts.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
