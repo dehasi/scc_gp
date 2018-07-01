@@ -3,6 +3,9 @@
 ### problem
 
 ### mock and test
+`$ gradle :generateContractTests`
+`$ gradle :generateClientStubs`
+`$ gradle :test`
 
 ### integrate with internal service
 
