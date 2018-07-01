@@ -1,27 +1,28 @@
-buildscript {
-    ext {
-        springBootVersion = '2.0.3.RELEASE'
-    }
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-        classpath "io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE"
-        // if using Stub Runner (consumer side) only remove this dependency
-        classpath "org.springframework.cloud:spring-cloud-contract-gradle-plugin:2.0.0.RELEASE"
-    }
-}
+//group parent.group
+//version '0.0.1-SNAPSHOT'
+//sourceCompatibility = 1.8
+
+
+//
+//buildscript {
+//    ext {
+//        springBootVersion = '2.0.3.RELEASE'
+//    }
+//    repositories {
+//        mavenCentral()
+//    }
+//    dependencies {
+//        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+//        classpath "io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE"
+//        classpath "org.springframework.cloud:spring-cloud-contract-gradle-plugin:2.0.0.RELEASE"
+//    }
+//}
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'spring-cloud-contract'
-
-group = 'me.dehasi.contracts.demo'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -34,6 +35,7 @@ dependencyManagement {
 }
 
 dependencies {
+//    compile project(':me.dehasi.contracts.demo')
     compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile group: 'org.assertj', name: 'assertj-core', version: '3.10.0'
@@ -44,7 +46,7 @@ dependencies {
 }
 
 contracts {
-    baseClassForTests = 'me.dehasi.contracts.demo.contract.ContractBase'
+    baseClassForTests = 'me.dehasi.contracts.sub.contract.ContractBae'
     // fully qualified name to a class that will be the base class for your generated test classes
 }// Unnecessary if you're using Spring Cloud Stub Runner only
 buildscript {
