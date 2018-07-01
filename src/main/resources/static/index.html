@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var host = "http://localhost"
+    var port = ":8080"
+    var uri = "/bets/"
+
+    function httpGet(theUrl) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", theUrl, false); // false for synchronous request
+        xmlHttp.send(null);
+        return xmlHttp;
+    }
+
+    function myFunction() {
+        var userId = document.getElementById("userId");
+        var text = "";
+        var response = httpGet(host + port + uri + userId.value)
+        if (response.status == 200) {
+            var jsonString = response.responseText;
+            var bets = JSON.parse(jsonString)
+            for (i = 0; i < bets.length; i++) {
+                text += bets[i]["sport"] + "<br>";
+            }
+        } else {
+            text = "user not found"
+        }
+        document.getElementById("demo").innerHTML = text;
+    }
+</script>
+
+<form id="frm1">
+    user id: <input type="text" id="userId" value=""><br>
+</form>
+
+<button onclick="myFunction()">submit</button>
+
+<p id="demo"></p>
+
+</body>
+</html>
