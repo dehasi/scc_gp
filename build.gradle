@@ -39,6 +39,7 @@ dependencies {
     testCompile group: 'org.assertj', name: 'assertj-core', version: '3.10.0'
     testCompile 'org.springframework.cloud:spring-cloud-starter-contract-verifier'
     testCompile group: 'io.rest-assured', name: 'rest-assured', version: '3.0.0'
+    testCompile group: 'io.rest-assured', name: 'spring-mock-mvc', version: '3.0.0'
 
 }
 
