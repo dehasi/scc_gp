@@ -28,4 +28,5 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile group: 'org.assertj', name: 'assertj-core-java8', version: '1.0.0m1'
+    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
 }
