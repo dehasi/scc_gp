@@ -11,14 +11,17 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.context.WebApplicationContext;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.Collections;
 
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
@@ -41,6 +44,9 @@ public class UserControllerTest {
     @MockBean
     private BetService service;
 
+    @MockBean
+    private RestTemplate restTemplate;
+
     private MockMvc mockMvc;
 
     @Before
@@ -48,6 +54,7 @@ public class UserControllerTest {
         mockMvc = MockMvcBuilders.webAppContextSetup(context)
                 .build();
     }
+    private MockRestServiceServer server;
 
     @Before
     public void setUpMocks() {
@@ -55,6 +62,8 @@ public class UserControllerTest {
         when(service.getByUserId(eq("1"))).thenReturn(Collections.emptyList());
         when(service.getByUserId(eq("2"))).thenReturn(Collections.singletonList(FOOTBALL));
         when(service.getByUserId(eq("3"))).thenReturn(Arrays.asList(HORSES, BOXING));
+
+        when(restTemplate.getForObject(anyString(), any())).thenReturn(new Object());
     }
 
     @Test
