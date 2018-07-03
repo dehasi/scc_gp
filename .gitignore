@@ -41,6 +41,7 @@ target/
 .gradle
 gradle
 /build/
+/out/
 
 # Ignore Gradle GUI config
 gradle-app.setting
