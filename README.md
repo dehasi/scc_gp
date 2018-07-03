@@ -16,3 +16,4 @@
 - [ ] add gradle commands 
 - [ ] add `yaml` examples
 - [ ] add `groovy` examples
+- [ ] add two contract base in the one project example
