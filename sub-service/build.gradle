@@ -2,7 +2,8 @@
 //version '0.0.1-SNAPSHOT'
 //sourceCompatibility = 1.8
 
-
+group = 'me.dehasi.contracts.demo'
+version = '0.0.1-SNAPSHOT'
 //
 //buildscript {
 //    ext {
@@ -23,7 +24,7 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'spring-cloud-contract'
-
+apply plugin: 'maven-publish'
 repositories {
     mavenCentral()
 }
@@ -35,7 +36,6 @@ dependencyManagement {
 }
 
 dependencies {
-//    compile project(':me.dehasi.contracts.demo')
     compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile group: 'org.assertj', name: 'assertj-core', version: '3.10.0'
@@ -53,6 +53,25 @@ buildscript {
     repositories {
         maven {
             url 'https://repo.spring.io/libs-snapshot'
+        }
+    }
+}
+
+//ext {
+//    contractsDir = file("mappings")
+//    stubsOutputDirRoot = file("${project.buildDir}/production/${project.name}-stubs/")
+//}
+
+// Automatically added by plugin:
+// copyContracts - copies contracts to the output folder from which JAR will be created
+// verifierStubsJar - JAR with a provided stub suffix
+// the presented publication is also added by the plugin but you can modify it as you wish
+
+publishing {
+    publications {
+        stubs(MavenPublication) {
+            artifactId "${project.name}-stubs"
+            artifact verifierStubsJar
         }
     }
 }

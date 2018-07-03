@@ -13,6 +13,10 @@
 
 ### integrate with internal service
 
+Add  `@AutoConfigureStubRunner`
+
+`$ gradle : publishToMavenLocal`
+
 ### integrate with outer service
 
 ### regression tests
