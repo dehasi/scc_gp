@@ -1,0 +1,7 @@
+name: getBets_returnBet
+request:
+  method: GET
+  url: /bets/2
+response:
+  status: 200
+  bodyFromFile: bets_for_acc2.json
