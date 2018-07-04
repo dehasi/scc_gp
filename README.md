@@ -21,4 +21,6 @@ Add  `@AutoConfigureStubRunner`
 
 `$ gradle : publishStubsPublicationToMavenLocal`
 
+`baseClassMappings`
+
 ### regression tests

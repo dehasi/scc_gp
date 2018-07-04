@@ -1,7 +1,6 @@
-package userController
+package ext
 
 org.springframework.cloud.contract.spec.Contract.make {
-    ignored()
     description('''
 given: Best url
 when: User requests bets

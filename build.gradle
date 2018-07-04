@@ -43,14 +43,14 @@ dependencies {
     testCompile group: 'io.rest-assured', name: 'spring-mock-mvc', version: '3.0.0'
     testCompile group: 'org.springframework.cloud', name: 'spring-cloud-starter-contract-stub-runner', version: '2.0.0.RELEASE'
 
-//    compile("me.dehasi.contracts.demo:sub-service:0.0.1-SNAPSHOT:stubs") {
-//        transitive = false
-//    }
 }
 
 contracts {
     baseClassForTests = 'me.dehasi.contracts.demo.contract.ContractBase'
-    // fully qualified name to a class that will be the base class for your generated test classes
+
+    baseClassMappings {
+        baseClassMapping('.*ext.*':'me.dehasi.contracts.demo.contract.ExternalContractBase')
+    }
 }// Unnecessary if you're using Spring Cloud Stub Runner only
 buildscript {
     repositories {
