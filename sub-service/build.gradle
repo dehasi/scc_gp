@@ -57,10 +57,10 @@ buildscript {
     }
 }
 
-//ext {
-//    contractsDir = file("mappings")
-//    stubsOutputDirRoot = file("${project.buildDir}/production/${project.name}-stubs/")
-//}
+ext {
+    contractsDir = file("mappings")
+    stubsOutputDirRoot = file("${project.buildDir}/production/${project.name}-stubs/")
+}
 
 // Automatically added by plugin:
 // copyContracts - copies contracts to the output folder from which JAR will be created

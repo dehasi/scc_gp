@@ -15,8 +15,10 @@
 
 Add  `@AutoConfigureStubRunner`
 
-`$ gradle : publishToMavenLocal`
+`$ gradle : publishStubsPublicationToMavenLocal`
 
-### integrate with outer service
+### integrate with external service
+
+`$ gradle : publishStubsPublicationToMavenLocal`
 
 ### regression tests
