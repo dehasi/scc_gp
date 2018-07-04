@@ -9,3 +9,8 @@
 ### integrate with outer service
 
 ### regression tests
+
+```groovy
+testMode = 'EXPLICIT'
+targetFramework = 'SPOCK'
+```
