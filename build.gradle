@@ -40,12 +40,17 @@ dependencies {
     testCompile 'org.springframework.cloud:spring-cloud-starter-contract-verifier'
     testCompile group: 'io.rest-assured', name: 'rest-assured', version: '3.0.0'
     testCompile group: 'io.rest-assured', name: 'spring-mock-mvc', version: '3.0.0'
+    testCompile 'org.codehaus.groovy:groovy-all:2.4.6'
+    // example with adding Spock core and Spock Spring
+    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+    testCompile 'org.spockframework:spock-spring:1.0-groovy-2.4'
 
 }
 
 contracts {
-    baseClassForTests = 'me.dehasi.contracts.demo.contract.ContractBase'
+    baseClassForTests = 'me.dehasi.contracts.demo.contract.SpockContractBase'
     testMode = 'EXPLICIT'
+    targetFramework = 'SPOCK'
     // fully qualified name to a class that will be the base class for your generated test classes
 }// Unnecessary if you're using Spring Cloud Stub Runner only
 buildscript {
