@@ -44,7 +44,8 @@ dependencies {
 }
 
 contracts {
-    baseClassForTests = 'me.dehasi.contracts.demo.contract.ContractBae'
+    baseClassForTests = 'me.dehasi.contracts.demo.contract.ContractBase'
+    testMode = 'EXPLICIT'
     // fully qualified name to a class that will be the base class for your generated test classes
 }// Unnecessary if you're using Spring Cloud Stub Runner only
 buildscript {

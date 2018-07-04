@@ -6,6 +6,8 @@ import me.dehasi.contracts.demo.SccDemoApplication;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -13,19 +15,14 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SccDemoApplication.class)
-public abstract class ContractBae {
-    @LocalServerPort
-    int port;
-    @Autowired
-    protected WebApplicationContext webApplicationContext;
+//@RunWith(SpringRunner.class)
+//@WebMvcTest
+public abstract class ContractBase {
+//    @Value("${host}")
+    String host = "http://localhost:8080/";
 
     @Before
-    public void configureRestAssured() {
-        RestAssured.port = port;
-        MockMvc mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext)
-                .build();
-        RestAssuredMockMvc.mockMvc(mockMvc);
+    public void configureRestAssured(){
+        RestAssured.baseURI = host;
     }
 }
