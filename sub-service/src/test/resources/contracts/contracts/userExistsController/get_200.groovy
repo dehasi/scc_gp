@@ -1,6 +1,8 @@
 package contracts.userExistsController
 
-org.springframework.cloud.contract.spec.Contract.make {
+import org.springframework.cloud.contract.spec.Contract
+
+Contract.make {
     request {
         method 'GET'
         urlPath '/exists/2'
