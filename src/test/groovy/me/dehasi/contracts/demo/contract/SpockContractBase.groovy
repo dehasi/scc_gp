@@ -4,8 +4,8 @@ import io.restassured.RestAssured
 import spock.lang.Specification
 
 class SpockContractBase extends Specification {
-    String host = "http://localhost:8080/";
+    String host = "http://localhost:8080/"
     def setup() {
-        RestAssured.baseURI = host;
+        RestAssured.baseURI = host
     }
 }
