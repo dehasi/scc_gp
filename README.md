@@ -1,4 +1,4 @@
-# Spring Cloud Contract Demo
+# Spring Cloud Contract
 
 ### problem
 
