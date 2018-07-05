@@ -1,5 +1,5 @@
 {
-  "id" : "98c939dd-bad5-4bdb-8abb-aa540595f070",
+  "id" : "ad4c8b69-200d-4b7c-a23a-0d812df9f7df",
   "request" : {
     "urlPath" : "/bets/1",
     "method" : "GET"
@@ -8,5 +8,5 @@
     "status" : 204,
     "transformers" : [ "response-template" ]
   },
-  "uuid" : "98c939dd-bad5-4bdb-8abb-aa540595f070"
+  "uuid" : "ad4c8b69-200d-4b7c-a23a-0d812df9f7df"
 }

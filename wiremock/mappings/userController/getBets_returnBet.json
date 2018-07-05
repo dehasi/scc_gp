@@ -1,5 +1,5 @@
 {
-  "id" : "18beba41-ddc6-4df1-a235-52ebfe307ac0",
+  "id" : "9d8f00f6-6093-4768-b89c-601ab053b07d",
   "request" : {
     "url" : "/bets/2",
     "method" : "GET"
@@ -7,7 +7,10 @@
   "response" : {
     "status" : 200,
     "body" : "{\"amount\":1,\"sport\":\"football\"}",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
     "transformers" : [ "response-template" ]
   },
-  "uuid" : "18beba41-ddc6-4df1-a235-52ebfe307ac0"
+  "uuid" : "9d8f00f6-6093-4768-b89c-601ab053b07d"
 }

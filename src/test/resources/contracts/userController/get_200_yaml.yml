@@ -4,4 +4,6 @@ request:
   url: /bets/2
 response:
   status: 200
+  headers:
+      Content-Type: application/json
   bodyFromFile: bets_for_acc2.json

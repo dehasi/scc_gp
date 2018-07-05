@@ -12,7 +12,9 @@ then: Server returns 200 and bets in the body
     }
     response {
         status 200
-
+        headers {
+            header('Content-Type', 'application/json')
+        }
         body('''
           {
             "sport":"football",

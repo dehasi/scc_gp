@@ -1,5 +1,5 @@
 {
-  "id" : "03c1c491-59e6-4eec-876b-cf48e26602b1",
+  "id" : "1ee61068-fce1-41c0-980c-d5946a1eac0c",
   "request" : {
     "urlPath" : "/bets/42",
     "method" : "GET"
@@ -8,5 +8,5 @@
     "status" : 404,
     "transformers" : [ "response-template" ]
   },
-  "uuid" : "03c1c491-59e6-4eec-876b-cf48e26602b1"
+  "uuid" : "1ee61068-fce1-41c0-980c-d5946a1eac0c"
 }
