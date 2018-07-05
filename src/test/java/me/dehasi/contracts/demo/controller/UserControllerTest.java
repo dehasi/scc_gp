@@ -58,7 +58,7 @@ public class UserControllerTest {
     }
 
     @Test
-    public void getBets_knownUserNoBets_201() throws Exception {
+    public void getBets_knownUserNoBets_204() throws Exception {
         mockMvc.perform(get("/bets/{userId}", "1"))
                 .andExpect(status().isNoContent());
     }
