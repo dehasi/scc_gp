@@ -1,0 +1,13 @@
+{
+  "id" : "18beba41-ddc6-4df1-a235-52ebfe307ac0",
+  "request" : {
+    "url" : "/bets/2",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"amount\":1,\"sport\":\"football\"}",
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "18beba41-ddc6-4df1-a235-52ebfe307ac0"
+}

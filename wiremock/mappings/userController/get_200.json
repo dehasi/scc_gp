@@ -1,0 +1,13 @@
+{
+  "id" : "4cf46e7d-7528-4ffc-9151-3c9278355df1",
+  "request" : {
+    "urlPath" : "/bets/2",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"amount\":1,\"sport\":\"football\"}",
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "4cf46e7d-7528-4ffc-9151-3c9278355df1"
+}

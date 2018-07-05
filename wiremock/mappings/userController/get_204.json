@@ -1,0 +1,12 @@
+{
+  "id" : "98c939dd-bad5-4bdb-8abb-aa540595f070",
+  "request" : {
+    "urlPath" : "/bets/1",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 204,
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "98c939dd-bad5-4bdb-8abb-aa540595f070"
+}
