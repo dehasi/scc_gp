@@ -18,3 +18,5 @@
 - [x] add `groovy` examples
 - [x] add two contract base in the one project example
 - [ ] show scenarios
+- [ ] generate a dependency view of producers and consumers
+- [ ] generate a documentation
