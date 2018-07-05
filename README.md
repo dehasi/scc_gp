@@ -14,6 +14,6 @@
 
 ## TODO
 - [ ] add gradle commands 
-- [ ] add `yaml` examples
-- [ ] add `groovy` examples
-- [ ] add two contract base in the one project example
+- [x] add `yaml` examples
+- [x] add `groovy` examples
+- [x] add two contract base in the one project example
