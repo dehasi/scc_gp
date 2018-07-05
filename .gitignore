@@ -50,3 +50,6 @@ gradle-app.setting
 
 # Cache of project
 .gradletasknamecache
+
+# wiremock
+!wiremock-standalone-2.18.0.jar
