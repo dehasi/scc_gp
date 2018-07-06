@@ -12,6 +12,6 @@ Add  `@AutoConfigureStubRunner`
 
 `$ gradle : publishToMavenLocal`
 
-### integrate with outer service
+### integrate with external service
 
 ### regression tests
