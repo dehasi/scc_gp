@@ -13,7 +13,7 @@
 ### regression tests
 
 ## TODO
-- [ ] add gradle commands 
+- [x] add gradle commands 
 - [x] add `yaml` examples
 - [x] add `groovy` examples
 - [x] add two contract base in the one project example
