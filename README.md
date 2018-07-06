@@ -1,5 +1,5 @@
-# Spring Cloud Contract Demo
-śś
+# Spring Cloud Contract
+
 ### problem
 
 ### mock and test
@@ -15,4 +15,6 @@ testMode = 'EXPLICIT'
 targetFramework = 'SPOCK'
 ```
 
-### repo github.com/dehasi/scc_gp
+*_scenarios_*
+
+### this repo: github.com/dehasi/scc_gp
