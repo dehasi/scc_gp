@@ -23,6 +23,7 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -75,6 +76,15 @@ public class UserControllerTest {
     public void getBets_unknownUser_404() throws Exception {
         mockMvc.perform(get("/bets/{userId}", "42"))
                 .andExpect(status().isNotFound());
+    }
+
+    @Test
+    public void postBet_saveBet() throws Exception {
+        String json = "{\"sport\":\"horses\",\"amount\":12}";
+        mockMvc.perform(post("/bets/{userId}", "1")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(json))
+                .andExpect(status().isOk());
     }
 
 }

@@ -1,13 +1,18 @@
 package me.dehasi.contracts.demo.domain;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.math.BigDecimal;
 import java.util.Objects;
+
 
 public final class Bet {
     public final String sport;
     public final BigDecimal amount;
 
-    public Bet(String sport, BigDecimal amount) {
+    @JsonCreator
+    public Bet(@JsonProperty("sport") String sport, @JsonProperty("amount") BigDecimal amount) {
         this.sport = sport;
         this.amount = amount;
     }
