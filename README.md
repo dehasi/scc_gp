@@ -5,17 +5,8 @@
 ### problem
 
 ### mock and test
-`$ gradle :generateContractTests`
-
-`$ gradle :generateClientStubs`
-
-`$ gradle :test`
 
 ### integrate with internal service
-
-Add  `@AutoConfigureStubRunner`
-
-`$ gradle : publishStubsPublicationToMavenLocal`
 
 ### integrate with external service
 
