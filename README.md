@@ -17,6 +17,6 @@
 - [x] add `yaml` examples
 - [x] add `groovy` examples
 - [x] add two contract base in the one project example
-- [ ] show scenarios
+- [x] show scenarios
 - [ ] generate a dependency view of producers and consumers
 - [ ] generate a documentation
