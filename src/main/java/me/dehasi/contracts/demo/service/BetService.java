@@ -1,16 +1,18 @@
 package me.dehasi.contracts.demo.service;
 
-import me.dehasi.contracts.demo.domain.Bet;
-import me.dehasi.contracts.demo.exception.UserNotFoundException;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Service;
+import static java.util.Arrays.asList;
 
 import java.math.BigDecimal;
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import org.springframework.stereotype.Service;
+
+import me.dehasi.contracts.demo.domain.Bet;
+import me.dehasi.contracts.demo.exception.UserNotFoundException;
 
 @Service
 public class BetService {
@@ -22,9 +24,9 @@ public class BetService {
     private Map<String, List<Bet>> database = new HashMap<>();
 
     public BetService() {
-        database.put("1", Collections.emptyList());
-        database.put("2", Collections.singletonList(FOOTBALL));
-        database.put("3", Arrays.asList(HORSES, BOXING));
+        database.put("1", new ArrayList<>());
+        database.put("2", new ArrayList<>(Collections.singletonList(FOOTBALL)));
+        database.put("3", new ArrayList<>(asList(HORSES, BOXING)));
     }
 
     public List<Bet> getByUserId(String userId) {

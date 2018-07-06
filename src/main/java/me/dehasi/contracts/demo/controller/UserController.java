@@ -47,9 +47,4 @@ public class UserController {
         // TODO: log exception
     }
 
-    @ExceptionHandler(Exception.class)
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public void handleError(Exception ex) {
-        // TODO: log exception
-    }
 }
