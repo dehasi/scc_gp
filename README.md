@@ -9,10 +9,10 @@
 
 `$ gradle :test`
 
+`$java -jar wiremock-standalone-2.18.0.jar --verbose`
+
 ### integrate with internal service
 
-### integrate with outer service
+### integrate with external service
 
 ### regression tests
-
-## TODO: run wiremock
